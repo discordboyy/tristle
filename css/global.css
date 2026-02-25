@@ -309,6 +309,10 @@ body.dark-mode {
   filter: brightness(1.05);
 }
 
+#gallery-img:hover {
+  cursor: zoom-in;
+}
+
 /* Список проектов в sidebar */
 .sidebar .work-list li a {
   position: relative;
@@ -389,3 +393,17 @@ body.dark-mode {
   }
 }
 
+
+/* Плавное появление/исчезание изображений */
+.gallery img {
+  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+  opacity: 1;
+}
+
+.gallery img.fade-out {
+  opacity: 0;
+}
+
+.gallery img.fade-in {
+  opacity: 1;
+}
