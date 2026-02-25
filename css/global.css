@@ -167,7 +167,7 @@ body.dark-mode {
     color: var(--color-text);
     text-decoration: none;
   }
-  .sidebar .work-list li a:hover { text-decoration: underline; }
+  .sidebar .work-list li a:hover {  }
 
   /* Right content */
   .content {
