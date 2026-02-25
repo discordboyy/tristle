@@ -1,0 +1,82 @@
+[
+  {
+    "projectName": "Test Project One",
+    "title": "Abstract Visual Study",
+    "subtitle": "Exploring balance and contrast",
+    "publisher": "tristle",
+    "designer": "tristle",
+    "description": "An experimental digital artwork focusing on composition, color contrast, and typography-driven layout. Part of a series exploring visual rhythm in digital design.",
+    "imageUrl": "https://pbs.twimg.com/media/HBtdnkgWwAAzO_m?format=jpg&name=4096x4096",
+    "viewLink": ""
+  },
+  {
+    "projectName": "Test Project Two",
+    "title": "Typography Experiment",
+    "subtitle": "Dynamic type and spatial arrangement",
+    "publisher": "tristle",
+    "designer": "tristle",
+    "description": "A project emphasizing innovative typography techniques combined with digital composition. It explores how type can shape the perception of a visual piece.",
+    "imageUrl": "https://pbs.twimg.com/media/HBi0TBdWcAAKb0Y?format=jpg&name=4096x4096",
+    "viewLink": ""
+  },
+  {
+    "projectName": "Moonlight Mansion",
+    "title": "Color Interaction Series",
+    "subtitle": "Studying hues and gradients",
+    "publisher": "tristle",
+    "designer": "tristle",
+    "description": "This series investigates color relationships in digital design, experimenting with gradients and layered textures to achieve visual harmony.",
+    "imageUrl": "https://pbs.twimg.com/media/HBO0GiEbEAAMBE2?format=jpg&name=4096x4096",
+    "viewLink": ""
+  },
+  {
+    "projectName": "Test Project Four",
+    "title": "Geometric Abstraction",
+    "subtitle": "Shapes, patterns, and movement",
+    "publisher": "tristle",
+    "designer": "tristle",
+    "description": "A digital composition using geometric forms and pattern repetition to create dynamic visual movement and structural depth.",
+    "imageUrl": "https://pbs.twimg.com/media/HBEWGdcbEAAmR81?format=jpg&name=4096x4096",
+    "viewLink": ""
+  },
+  {
+    "projectName": "Test Project Five",
+    "title": "Minimalist Poster Series",
+    "subtitle": "Clean lines, bold statements",
+    "publisher": "tristle",
+    "designer": "tristle",
+    "description": "A collection of minimalist posters highlighting simplicity and strong visual messaging. Focuses on typography, negative space, and color contrast.",
+    "imageUrl": "https://pbs.twimg.com/media/HA-da_Tb0AAMHOx?format=jpg&name=4096x4096",
+    "viewLink": ""
+  },
+  {
+    "projectName": "Test Project Six",
+    "title": "Interactive Digital Mockups",
+    "subtitle": "UI elements and visual hierarchy",
+    "publisher": "tristle",
+    "designer": "tristle",
+    "description": "This project explores user interface concepts through digital mockups, emphasizing layout hierarchy, interaction design, and visual clarity.",
+    "imageUrl": "https://pbs.twimg.com/media/HA1KFF3aAAApXyE?format=jpg&name=4096x4096",
+    "viewLink": ""
+  },
+  {
+    "projectName": "Test Project Seven",
+    "title": "Experimental Collage",
+    "subtitle": "Textures, layers, and abstract forms",
+    "publisher": "tristle",
+    "designer": "tristle",
+    "description": "A digital collage project combining textures, shapes, and abstract elements to create visually engaging compositions with depth and contrast.",
+    "imageUrl": "https://pbs.twimg.com/media/HAz5OjwaAAQ0sy6?format=jpg&name=4096x4096",
+    "viewLink": ""
+  },
+  {
+    "projectName": "Test Project Eight",
+    "title": "Visual Narrative Series",
+    "subtitle": "Storytelling through design",
+    "publisher": "tristle",
+    "designer": "tristle",
+    "description": "A series of visual narratives where each piece tells a story through color, composition, and typographic elements, blending art with conceptual design.",
+    "imageUrl": "https://pbs.twimg.com/media/HAlGhb_XQAEA2So?format=jpg&name=4096x4096",
+    "viewLink": ""
+  }
+]
