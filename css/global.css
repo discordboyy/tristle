@@ -396,7 +396,7 @@ body.dark-mode {
 
 /* Плавное появление/исчезание изображений */
 .gallery img {
-  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.3s ease, filter 0.3s ease;
   opacity: 1;
 }
 
