@@ -417,3 +417,67 @@ body.dark-mode {
 .viewer-nav {
   z-index: 10;
 } 
+
+/* стрелки */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gallery-arrow svg {
+  width: 28px;
+  height: 28px;
+}
+
+.gallery-arrow circle {
+  fill: rgba(0,0,0,0.06);
+  transition: fill 0.2s ease;
+}
+
+.gallery-arrow path {
+  stroke: #000;
+  stroke-width: 1.4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.gallery-arrow:hover circle {
+  fill: rgba(0,0,0,0.15);
+}
+
+.gallery-prev {
+  left: -50px; /* можешь регулировать */
+}
+
+.gallery-next {
+  right: -50px;
+}
+
+.gallery {
+  position: relative; /* теперь абсолютные стрелки привяжутся к контейнеру */
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10; /* поверх img */
+}
+
+.gallery-prev {
+  left: 10px; /* или -50px если хочешь за пределами img */
+}
+
+.gallery-next {
+  right: 10px;
+}

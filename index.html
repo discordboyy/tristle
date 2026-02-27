@@ -67,7 +67,23 @@
 
     <!-- Gallery area -->
     <div class="gallery" id="project-gallery">
+
+      <button class="gallery-arrow gallery-prev">
+        <svg viewBox="0 0 36 36">
+          <circle cx="18" cy="18" r="18"></circle>
+          <path d="M22 10 L14 18 L22 26"></path>
+        </svg>
+      </button>
+
       <img src="" alt="Project Image" loading="lazy" id="gallery-img" class="fade">
+
+      <button class="gallery-arrow gallery-next">
+        <svg viewBox="0 0 36 36">
+          <circle cx="18" cy="18" r="18"></circle>
+          <path d="M14 10 L22 18 L14 26"></path>
+        </svg>
+      </button>
+
     </div>
 
     <!-- Project info -->
@@ -99,6 +115,11 @@
     toggle.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
   });
 
+  let currentProjectIndex = 0;
+
+  const galleryPrev = document.querySelector('.gallery-prev');
+  const galleryNext = document.querySelector('.gallery-next');
+
   // Load JSON and render projects
   let projects = [];
   const projectList = document.getElementById('project-list');
@@ -116,7 +137,10 @@
     .then(data => {
       projects = data;
       renderProjectList();
-      if(projects.length > 0) loadProject(projects[0]);
+      if(projects.length > 0) {
+        currentProjectIndex = 0;
+        loadProject(projects[0]);
+      }
     });
 
   function renderProjectList() {
@@ -128,6 +152,7 @@
       a.textContent = proj.projectName;
       a.addEventListener('click', (e) => {
         e.preventDefault();
+        currentProjectIndex = index;
         loadProject(proj);
       });
       li.appendChild(a);
@@ -156,6 +181,22 @@
     projectDescriptionEl.textContent = proj.description;
     projectViewLinkEl.href = proj.viewLink || '#';
   }
+
+  galleryPrev.addEventListener('click', () => {
+    currentProjectIndex--;
+    if (currentProjectIndex < 0)
+      currentProjectIndex = projects.length - 1;
+
+    loadProject(projects[currentProjectIndex]);
+  });
+
+  galleryNext.addEventListener('click', () => {
+    currentProjectIndex++;
+    if (currentProjectIndex >= projects.length)
+      currentProjectIndex = 0;
+
+    loadProject(projects[currentProjectIndex]);
+  });
 </script>
 
 </body>
