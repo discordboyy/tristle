@@ -418,51 +418,7 @@ body.dark-mode {
   z-index: 10;
 } 
 
-/* стрелки */
-.gallery-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.gallery-arrow svg {
-  width: 28px;
-  height: 28px;
-}
-
-.gallery-arrow circle {
-  fill: rgba(0,0,0,0.06);
-  transition: fill 0.2s ease;
-}
-
-.gallery-arrow path {
-  stroke: #000;
-  stroke-width: 1.4;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.gallery-arrow:hover circle {
-  fill: rgba(0,0,0,0.15);
-}
-
-.gallery-prev {
-  left: -50px; /* можешь регулировать */
-}
-
-.gallery-next {
-  right: -50px;
-}
-
-.gallery {
-  position: relative; /* теперь абсолютные стрелки привяжутся к контейнеру */
-}
-
+/* Общие стили стрелок */
 .gallery-arrow {
   position: absolute;
   top: 50%;
@@ -472,12 +428,53 @@ body.dark-mode {
   padding: 0;
   cursor: pointer;
   z-index: 10; /* поверх img */
+  pointer-events: auto;
 }
 
+.gallery-arrow svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Круг заливки */
+.gallery-arrow circle {
+  fill: rgba(0, 0, 0, 0.06); /* светлый режим */
+  transition: fill 0.2s ease;
+}
+
+/* Линия стрелки */
+.gallery-arrow path {
+  stroke: var(--color-text); /* использует текущий текстовый цвет */
+  stroke-width: 1.4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Hover эффект */
+.gallery-arrow:hover circle {
+  fill: rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode */
+body.dark-mode .gallery-arrow circle {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .gallery-arrow:hover circle {
+  fill: rgba(255, 255, 255, 0.25);
+}
+
+body.dark-mode .gallery-arrow path {
+  stroke: var(--color-text); /* в dark-mode --color-text меняется на светлый */
+}
+
+/* Позиционирование */
 .gallery-prev {
-  left: 10px; /* или -50px если хочешь за пределами img */
+  left: 10px; /* или -50px для выхода за img */
 }
 
 .gallery-next {
   right: 10px;
 }
+

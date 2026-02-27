@@ -4,14 +4,14 @@
 .viewer-overlay {
   position: fixed;
   inset: 0;
-  background: #ffffff;
+  background: var(--color-bg); /* теперь динамический */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
   opacity: 0;
-  transition: opacity 0.35s ease;
-  cursor: default; /* ← теперь default */
+  transition: opacity 0.35s ease, background 0.3s ease;
+  cursor: default;
 }
 
 .viewer-overlay.active {
@@ -91,4 +91,53 @@
 
 .viewer-nav {
   z-index: 10;
+}
+
+/* Общая кнопка */
+.viewer-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* SVG */
+.viewer-btn svg {
+  width: 36px;
+  height: 36px;
+}
+
+/* Цвет заливки круга через переменную */
+.viewer-btn circle {
+  fill: rgba(0, 0, 0, 0.06); /* светлый режим */
+  transition: fill 0.2s ease;
+}
+
+/* Цвет линии стрелки через переменную */
+.viewer-btn path {
+  stroke: #000; /* светлый режим */
+  stroke-width: 1.4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Hover */
+.viewer-btn:hover circle {
+  fill: rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode для viewer */
+body.dark-mode .viewer-btn circle {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .viewer-btn:hover circle {
+  fill: rgba(255, 255, 255, 0.25);
+}
+
+body.dark-mode .viewer-btn path {
+  stroke: #fff;
 }
