@@ -124,6 +124,10 @@ function openViewer() {
     setTimeout(() => {
       overlay.remove();
       document.removeEventListener('keydown', handleKey);
+
+      // 🔹 Синхронизируем основную галерею
+      currentProjectIndex = currentIndex;
+      loadProject(projects[currentProjectIndex]);
     }, 500);
   }
 
