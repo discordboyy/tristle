@@ -410,3 +410,10 @@ body.dark-mode {
 
 
 
+.viewer-image {
+  z-index: 1;
+}
+
+.viewer-nav {
+  z-index: 10;
+}
