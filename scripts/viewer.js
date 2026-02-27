@@ -132,4 +132,4 @@ function openViewer() {
   }
 
   closeBtn.addEventListener('click', closeViewer);
-} 
+}
