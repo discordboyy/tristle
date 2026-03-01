@@ -491,6 +491,10 @@ body.dark-mode .gallery-arrow path {
   touch-action: pan-y; /* чтобы вертикальный скролл не ломался */
 }
 
+.name-title {
+  display: none;
+}
+
 /* Скрываем стрелки на маленьких экранах */
 @media (max-width: 768px) {
   .gallery-arrow {
@@ -558,4 +562,11 @@ body.dark-mode .gallery-arrow path {
     grid-column: 1;
     grid-row: auto;
   }
+
+  .sidebar .skills-label, .name-title, .sidebar .work-label {
+    font-size: 50px;
+    display: block;
+  }
+
+  
 }
