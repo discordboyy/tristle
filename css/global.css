@@ -31,12 +31,20 @@ body.dark-mode {
 }
 
 /* Пример кнопки переключения (можно реализовать JS) */
-.dark-toggle {
+.dark-toggle, .dark-toggle-mobile {
   cursor: pointer;
   font-size: var(--font-size-small);
   font-family: var(--font-main);
   color: var(--color-text);
   display: inline-block;
+}
+
+.dark-toggle-mobile {
+  display: none;
+  border: none;
+  background: none;
+  text-align: left;
+  margin-bottom: 2vh;
 }
 
 
@@ -498,5 +506,56 @@ body.dark-mode .gallery-arrow path {
     width: 90vw;
     height: auto; /* сохраняет пропорции изображения */
     max-width: 95%; /* на случай, если ширина родителя меньше */
+  }
+
+    /* Увеличиваем базовые размеры шрифтов */
+  :root {
+    --font-size-main: 0.9rem;
+    --font-size-small: 0.85rem;
+    --font-size-xs: 0.75rem;
+    --font-size-xxs: 0.7rem;
+  }
+
+  body {
+    font-size: var(--font-size-main);
+  }
+
+  .dark-toggle-mobile {
+    display: inline-block;
+  }
+
+  .top-bar {
+    display: none !important;
+  }
+
+  /* Остальная мобильная логика */
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-main);
+    margin-top: 3vh;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .gallery img {
+    height: auto;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px 0;
+  }
+
+  .project-info .project-desc {
+    grid-column: 1;
+    grid-row: auto;
   }
 }
