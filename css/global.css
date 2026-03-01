@@ -477,3 +477,26 @@ body.dark-mode .gallery-arrow path {
 .gallery-next {
   right: 10px;
 }
+
+#project-gallery {
+  cursor: grab;
+  touch-action: pan-y; /* чтобы вертикальный скролл не ломался */
+}
+
+/* Скрываем стрелки на маленьких экранах */
+@media (max-width: 768px) {
+  .gallery-arrow {
+    display: none;
+  }
+
+  .viewer-prev,
+  .viewer-next {
+    display: none;
+  }
+
+  .viewer-overlay.active img.viewer-image {
+    width: 90vw;
+    height: auto; /* сохраняет пропорции изображения */
+    max-width: 95%; /* на случай, если ширина родителя меньше */
+  }
+}
