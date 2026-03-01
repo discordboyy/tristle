@@ -458,7 +458,7 @@ body.dark-mode {
 
 /* Dark mode */
 body.dark-mode .gallery-arrow circle {
-  fill: rgba(255, 255, 255, 0.1);
+  fill: rgba(255, 255, 255, 0.1); 
 }
 
 body.dark-mode .gallery-arrow:hover circle {
